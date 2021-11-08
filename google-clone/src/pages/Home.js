@@ -10,6 +10,22 @@ import Search from './Search';
 
 function Home()
 {
+    window.onload = function () {
+        var typedValue = document.getElementById('typedContainer');
+        var initialValue = document.getElementById('logoContainer');
+        var initialValueContainer = initialValue.innerHTML;
+        typedValue.onkeyup = () =>{
+            if(typedValue.value.length !== 0){
+            initialValue.innerHTML = typedValue.value;
+            }
+            else if (typedValue.value.length === 0){
+                initialValue.innerHTML = initialValueContainer;
+            }
+            else{
+                initialValue.innerHTML = initialValueContainer;
+            }
+        }
+    }
     return (
         <div className='home'>
             <div className='home-header'>
@@ -29,7 +45,9 @@ function Home()
             </div>
 
             <div className='home-body'>
-                <img src={SH_LOGO} alt="Logo" />
+                <div id='logoContainer' className='logoContainer'>
+                    <img src={SH_LOGO} alt="Logo" />
+                </div>
                 
                 <div className='home-inputContainer'>
                 <Search />

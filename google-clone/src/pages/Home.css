@@ -41,7 +41,7 @@
     flex-direction: column;
 }
 
-.home-body > img{
+.home-body > .logoContainer > img{
     object-fit: contain;
     height: 100px;
 }

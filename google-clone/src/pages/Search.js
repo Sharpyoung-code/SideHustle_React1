@@ -6,11 +6,12 @@ import { Button } from "@material-ui/core";
 
 function search()
 {
+    
     return (
         <div className = 'search'>
             <div className='search-input'>
                 <SearchIcon className="search-inputIcon" />
-                <input />
+                <input id='typedContainer' />
                 <MicIcon />
             </div>
 
